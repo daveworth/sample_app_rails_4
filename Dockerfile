@@ -1,7 +1,8 @@
 FROM ruby:2.1.5
-RUN mkdir -p /usr/src/sample_app_rails_4
-WORKDIR /usr/src/sample_app_rails_4
-COPY . /usr/src/sample_app_rails_4
+RUN mkdir -p /opt/apps/sample_app_rails_4
+WORKDIR /opt/apps/sample_app_rails_4
+COPY . /opt/apps/sample_app_rails_4
+# You should definitely change the SECRET_KEY_BASE
 ENV SECRET_KEY_BASE af11b5847a6110626cfb16d71d60f71f
 RUN bundle install
 RUN apt-get update
